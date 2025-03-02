@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jes Lim</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +13,33 @@
     <!-- Main Header and Navigation -->
     <header id="main-header">
         <div class="container">
+            <!-- Nav Bar Desktop -->
             <nav class="navigation">
-                <h1 id="logo">Jes Lim</h1>
+                <a href="index.html" class="button"><h1 id="logo">Jes Lim</h1></a>
                 <ul>
-                    <li><a href="index.html" class="button">About Me</a></li>
+                    <li><a href="index.html#aboutme" class="button">About Me</a></li>
+                <li><a href="index.html#credentials" class="button">Credentials</a></li>
                     <li><a href="index.html#services" class="button">Services</a></li>
                     <li><a href="index.html#testimonials" class="button">Testimonials</a></li>
                     <li><a href="https://wa.me/61404287992?text=Hello%21%20I%20would%20like%20more%20information%20on%20your%20dietitian%20services.
-" class="btn">Book an appointment</a></li>
+                        " class="btn">Book an appointment</a></li>
                 </ul>
+                <!-- Hamburger menu -->
+                <div class="menu-container">
+                    <div class="line line-1">
+                        <div class="line-inner line-inner-1"></div>
+                    </div>
+                    <div class="line line-2">
+                        <div class="line-inner line-inner-2"></div>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
     <!-- Landing -->
-    <div class="firstlanding">
-        <div class="landingtext container">
+    <div class="container firstLanding_container">
+        <div class="landingtext">
             <p>NUTRITION AND WELLNESS</p>
             <h1>For a healthy lifestyle</h1>
         </div>
@@ -37,60 +48,72 @@
         </div>
     </div>
 
-    <!-- Personal Profile -->
-    <div class="personaldiv" id="personal">
-            <section id="main">
-                <h1>Hi! I'm Jes.</h1>
-                <p>A <u>passionate dietitian</u> dedicated to empowering individuals like you, achieve a healthy, balanced lifestyle. </p>
-                <p>With a <u>warm, personalized approach</u> and years of expertise, I’m here to guide you on your journey to better nutrition, wellness, and lasting results.</p>
-                <div class="buttonpara">
-                    <a href="https://wa.me/61404287992?text=Hello%21%20I%20would%20like%20more%20information%20on%20your%20dietitian%20services.
-" class="btn">Book an appointment</a>
-                    <p id="smallbuttontext">I'd love to get to know you!</p>
+    <!-- About Me -->
+    <div class="container aboutme_container">
+        <div id="aboutme">
+            <div class="col">
+                <h1 id="first-row">Hi! I'm Jes.</h1> 
+                <div id="second-row">
+                    <p>A <u>passionate dietitian</u> dedicated to empowering individuals like you, achieve a healthy, balanced lifestyle.</p>         
+                    <p>With a <u>warm, personalized approach</u> and years of expertise, I’m here to guide you on your journey to better nutrition, wellness, and lasting results.</p>   
+                    <div class="buttonpara">
+                        <a href="https://wa.me/61404287992?text=Hello%21%20I%20would%20like%20more%20information%20on%20your%20dietitian%20services." class="btn">Book an appointment</a>
+                        <div id="smallbuttontext">I'd love to get to know you!</div>
+                    </div>
                 </div>
-            </section>
-        <div class="wrap">
-            <img src="images/portrait.png" alt="portrait">
+            </div>
+            <!--Jes'portrai't image -->
+            <div class="col" id="wrap">
+                <img src="images/portrait.png" alt="portrait">
+            </div>
         </div>
-        <br>
     </div>
 
-    <!-- Second section below Personal -->
-    <div class="container">
-        <div class="credentials">
-            <img src="images/apd.png" alt="" class="logo">
-            <img src="images/monash.png" alt="" class="logo">
-            <img src="images/nottingham.png" alt="" class="logo">
-        </div>
-        <div class="details">
-            <h2>Accredited Practising Dietitian</h2>
-            <p>At the heart of my practice is a commitment to helping individuals live their healthiest, happiest lives through personalized, sustainable nutrition solutions. As an Accredited Practising Dietitian, I believe in tailoring my guidance to meet each person’s unique needs, preferences, and health goals.
-                
-                Drawing from my rich experience working with Singapore's Health Promotion Board, I have led numerous workshops, seminars, and cooking demonstrations, empowering my clients with the knowledge to make informed dietary choices. I take a holistic approach to nutrition, integrating not only the science behind food and health but also each individual’s cultural background and personal preferences to create realistic, effective plans.
-                
-                My background, including my time as a flight stewardess with Singapore Airlines, has refined my ability to connect deeply with people from all walks of life. A fun fact, I have a huge passion for travel, exploring new cultures, and I love health and wellness activities; fitness—yoga, top rope climbing, and Pilates-adding to my nutrition counseling.
-                
-                Whether you’re looking to improve your overall well-being, achieve specific health goals, or simply adopt a more balanced lifestyle, I'm here to provide sound, expert advice that fits seamlessly into your life.
-            </p>
+
+    <!-- Credentials -->
+    <div class="container credentials_container">
+        <div id="credentials">
+            <div class="apd_container">
+                <img src="images/apd.png" alt="" class="logo">
+                <img src="images/monash.png" alt="" class="logo">
+                <img src="images/nottingham.png" alt="" class="logo">
+            </div>
+            <div class="apd_container">
+                <h1>Accredited Practising Dietitian</h1>
+                <p>I’m an Accredited Practising Dietitian dedicated to helping individuals achieve their healthiest, happiest lives through sustainable and personalized nutrition solutions.
+                </p>
+                <p>I go beyond food by integrating science, lifestyle, and cultural preferences to create tailored, realistic nutrition plans.
+
+                    With experience at Singapore’s Health Promotion Board, I’ve led workshops and demonstrations, helping individuals make informed dietary choices. My background as a former flight stewardess with Singapore Airlines has enhanced my ability to connect with people from diverse backgrounds, ensuring practical and approachable guidance.
+                    
+                    Passionate about health, wellness, and fitness—whether yoga, top rope climbing, or Pilates—I believe movement is key to a balanced lifestyle. Traveling and exploring cultures further enriches my understanding of global food traditions.
+                    
+                    I’m here to support you with expert, personalized guidance to improve your well-being, achieve health goals, and build a balanced lifestyle.
+                </p>
+                <p id="bolded_end"><strong>Let’s work together to make nutrition simple, enjoyable, and sustainable for you! </p>         </strong></p>
+            </div>
         </div>
     </div>
 
     <!-- Services -->
-    <div id="services">
-        <div class="container">
-            <div class="services__image">
+    <div class="container services_container">
+        <div id="services">
+            <div class="services__div">
                 <img src="images/healthybreakie2.jpg" alt="">
             </div>
             <div class="services__div">
                 <div class="title">
                     <h1>I can help you with</h1>
                 </div>
-                <div class="servicescontainer">
+                <div class="servicestextcontainer">
                     <div class="service">
                         <div class="icon">
                             <img src="images/weight.png" alt="">
                         </div>
                         <h2>Personalized Meal Plans</h2>
+                        <!-- <div class="weight_active">
+                            Lorem ipsum
+                        </div> -->
                     </div>
                     <div class="service">
                         <div class="icon">
@@ -115,31 +138,21 @@
         </div>
     </div>
 
-    <!--  Worked alongside doctors, Workshops, Age Care, Community Settings (Nutritionist) -->
-
     <!-- Testimonials -->
-    <div id="testimonials">
-        <div class="container">
+    <div class="container testimonial_container">
+        <div id="testimonials">
+            <!-- Testimonials div-->
             <div class="title">
                 <h1>What my clients have said</h1>
             </div>
             <!-- Carousel Container -->
-            <div class="carousel">
-
-            <button class="carousel_button" id="carousel_button_next">
-                <span>></span>
-            </button>
-
-            <button class="carousel_button" id="carousel_button_prev">
-                <span><</span>
-            </button>
-
+            <div class="carousel  snaps-inline">
                 <!-- Items -->
                 <div class="item item__active">
                     <img src="images/first.png" alt="">
                     <h3 class="name">Meghaan</h3>
                     <p><em>Dealing with Dyspepsia and IBS-C</em></p>
-                    <p class="text">"Before we started working together more than 6 months ago, I had all sorts of problems, some of these I didn't even know were problems. <br><br>Here we are 6 months later, my life is so much better; I no longer have headaches everyday, I don't have what I thought were seasonal or environmental allegies, I don't feel as though I'm getting sick most days, I don't have awful reflex[es]. <br><br>The list goes on, but you know what amazing effects food can have. We still have work to do, however I thank you so much."</p>
+                    <p class="text">"Before we started working together more than 6 months ago, I had all sorts of problems, some of these I didn't even know were problems. <br><br>Here we are 6 months later, my life is so much better; I no longer have headaches everyday, I don't have what I thought were seasonal or environmental allegies, I don't feel as though I'm getting sick most days, I don't have awful reflex[es].</p>
                 </div>
                 <div class="item">
                     <img src="images/second.png" alt="">
@@ -169,21 +182,9 @@
                     <h3 class="name">Jordan</h3>
                     <p class="text">"I have had the pleasure of having Jes as my dietitican, [for] meal plans and food portion[ing]. [It's] not easy but it's important to get me back on track. [She helped me with watching] my diet and most importantly, to keep me on top of my diabetes, eat right and stay healthy."</p> 
                 </div>
-
-                <!-- Carousel Radio -->
-                 <div class="carousel_nav">
-                    <div class="carousel_indicator"></div>
-                    <div class="carousel_indicator"></div>
-                    <div class="carousel_indicator"></div>
-                 </div>
             </div>
         </div>
     </div>
-</div>
-
-
-    <!-- Chat with Me button -->
-    <!-- <a id="chat" class="button" href="https://wa.me/61404287992">Chat with me</a> -->
 
     <!-- Footer -->
     <div class="container">
