@@ -375,7 +375,7 @@ a:active{
 /* Testimonials */
 #testimonials{
     text-align: center;
-    padding-top: 20vh;
+    padding-top: 18vh;
 }
 
 .carousel{
@@ -383,7 +383,7 @@ a:active{
     grid-auto-flow: column;
     gap: 5%;
     grid-auto-columns: 35%;
-    grid-auto-rows: 45%;
+    grid-auto-rows: 100%;
     padding-bottom: 5%;
 
     overflow-x: auto;
@@ -398,7 +398,7 @@ a:active{
 
 .item img{
     object-fit: contain;
-    width: 100%;
+    width: 80%;
     max-height: 100%;
 }
 
