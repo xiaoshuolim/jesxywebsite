@@ -39,7 +39,21 @@ h1{
     width:85%;
     height: 100%;
     margin: auto; /* Center the container horizontally */
-    padding-bottom: 2rem;
+}
+
+/* Scroll Wrapper */
+.scroll_wrapper{
+    height:100dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 20vh;
+}
+
+.scroll_section{
+    height:100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 /* Navigation */
@@ -50,7 +64,6 @@ h1{
     font-size:2.5rem;
     position: fixed;
     top: 0px;
-    padding-bottom: 0rem !important;
     background-color: white;
     z-index: 99;
 }
@@ -59,11 +72,12 @@ h1{
     font-size: 3rem;
 }
 .navigation{
-    position: relative;
+    position: sticky;
     display: inline-flex;
     width:100%;
-    height:20vh;
+    height:inherit;
     align-items: center;
+    z-index: 99;;
 }
 
 .navigation h1{
@@ -94,7 +108,7 @@ h1{
     width: 40px;
     cursor: pointer;
     position: absolute;
-    right: 40px;
+    right: 30px;
     display: none;
 }
 
@@ -144,7 +158,6 @@ h1{
   transition-delay: 200ms;
 }
 
-
 /* Buttons in general */
 a{
     color:#3f4e4f;
@@ -163,56 +176,68 @@ a:active{
 
 /* Landing */
 .firstLanding_container{
-    height: 80vh;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    padding-bottom: 20vh;
 }
 
-.firstLanding_container img{
-    object-fit: cover;
-    width: 100%;
+#landing{
     height: 100vh;
-    z-index: 1;
+    width: 100vw;
+    object-fit: contain;
+    position: relative;
 }
 
 .landingtext{
     color:#ffffff;
     position: absolute;
     opacity: 0;
-    top: 20vh;
+    top: 15vh;
     left: 15vh;
     transform: translate(0%, 50%);
     transition: transform .8s ease-in-out;
-    z-index: 10;
+    z-index: 1000;
 }
 
-.landingtext h1{
+#landing img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#landing h1{
     font-weight:300;
     font-size:5rem;
 }
 
-.landingtext p{
+#landing p{
     font-size:2rem;
     margin-bottom:-50px;
 }
 
 .landingtext.loaded{
     opacity: 1;
-    z-index: 10;
+    z-index: 1000;
 }
 
 /* Personal */
 .aboutme_container{
     display: flex;
-    height: 100vh;
+    height: 80vh;
+    width: 85%;
+    margin: auto;
+    justify-content: center;
+    padding-top: 5dvh;
 }
 
 #aboutme{
-    height:auto;
-    align-items: center;
+    height:inherit;
+    align-items: start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap; 
-    padding-top: 15vh;
 }
 
 .col:nth-child(1){
@@ -276,12 +301,16 @@ a:active{
 
 /* Credentials */
 .credentials_container{
-    height:100vh;
+    height: 80vh;
+    width: 85%;
+    margin: auto;
+    display: flex ;
+    justify-content: center;
+    padding-bottom: 10vh;
 }
 
 #credentials{
     height:auto;
-    padding-top: 20vh;
     display: flex;
     flex-direction: row;
     z-index: 8;
@@ -290,16 +319,19 @@ a:active{
 .apd_container:nth-child(1){
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap:10%;
+    gap:5rem;
     flex: 1 1 0%;
+    object-fit: contain;
 }
 
 .logo{
     width: 45%;
+    height: auto;
 }
 
 .apd_container:nth-child(2){
+    display:flex;
+    flex-direction: column;
     flex: 4 1 0%;
 }
 
@@ -308,20 +340,21 @@ a:active{
 }
 
 .apd_container #bolded_end{
-    font-size: 1.9rem;
+    font-size: 1.6rem;
 }
 
 /* Services */
 .services_container{
-    height: 100vh;
+    height: 80vh;
+    width: 85%;
+    margin: auto;
 }
 
 #services {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 20vh;
 }
 
 .services__div:nth-child(1){
@@ -332,14 +365,20 @@ a:active{
 .services__div:nth-child(1) img{
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 85%;
 }
+
+.services__div:nth-child(2) .title h1{
+    font-size: 2rem;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
 
 .services__div:nth-child(2){
     overflow: hidden;
     flex: 1 1 0%;
     text-align: center;
-    padding-bottom: 2rem;
 }
 
 .servicestextcontainer{
@@ -355,12 +394,17 @@ a:active{
     flex: 1 1 calc(50% - 10px); /* Cards take up 50% width with space between */
     align-items: center;
     background-color: rgb(255, 255, 255);
-    width: 25rem;
-    height: 5rem;
+    width: 20rem;
+    height: 2.5rem;
     padding: 0.5rem 3rem;
     border-radius: 5rem;
-    margin: 0.5rem;
+    margin: 0rem;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.service .icon img{
+    width: 2rem;
+    height: 2rem;    
 }
 
 .service:hover{
@@ -373,27 +417,35 @@ a:active{
 }
 
 /* Testimonials */
+.testimonial_container{
+    height: 80vh;
+    width: 85%;
+    margin: auto;
+}
+
 #testimonials{
     text-align: center;
-    padding-top: 18vh;
+    margin: auto;
 }
 
 .carousel{
-    display:grid;
+    display: grid;
     grid-auto-flow: column;
-    gap: 5%;
-    grid-auto-columns: 35%;
+    gap: 3%;
+    grid-auto-columns: 43%;
     grid-auto-rows: 100%;
     padding-bottom: 5%;
 
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 }
+
 .item{
     border-radius: 5rem;
-    background-color: rgb(255, 255, 255);
+    background-color: #192E6F;
+    color: white;
     box-shadow: 10px 10px 20px rgba(3, 4, 94, 0.2);
-    padding: 5%;
+    padding: 1.2rem;
 }
 
 .item img{
@@ -418,7 +470,6 @@ a:active{
 #main-footer{
     color:rgb(0, 0, 0);
     text-align: center;
-    margin-top: 100px;
     bottom:0px;
     position:relative;
 }
@@ -438,8 +489,15 @@ a:active{
 
 /* MEDIA QUERIES */
 /* Small Desktops */
-@media screen and (max-width:1140px){
+@media screen and (max-width:980px){
     .menu-container {display:block;}
     .navigation ul li {display:none;}
-    h1 {font-size: 3.5rem;}
+    h1 {font-size: 3rem;}
+    #credentials{flex-direction: column;}
+    .apd_container:nth-child(1){display:flex; width: 30%; flex-direction: row; flex: 1 1 auto; align-items: center;}
+    .apd_container:nth-child(2){align-items: center;}
+    .apd_container p{margin: 0.8rem; text-align: center; font-size: 1.3rem;}
+    .service{width: 20vw; height: 5vh;}
+    .carousel{grid-auto-columns: 53%;}
+    .item{padding: 1.2rem;}
 }
